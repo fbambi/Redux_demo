@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 
 import {connect} from 'react-redux';
 
+
 class _Page2 extends Component{
 
   render(){

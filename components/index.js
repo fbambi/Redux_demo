@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 
 import AppReducer from './reducer.js';
 
+import Immutable,{fromJS,toJS} from 'immutable';
 
 class App extends Component {
     render() {
@@ -32,8 +33,41 @@ function counter(state={count:0},action){
   }
 }
 
+let obj={
+  a:1,
+  b:{
+    1:1,
+    2:2
+  },
+  d:[{
+    a:1
+  },{
+    b:1,
+  },{
+    c:[{c:1}]
+  }]
+};
 
-var store = createStore(AppReducer);
+
+let imObj = fromJS(obj);
+
+console.log(imObj);
+debugger;
+let imObj2=imObj.setIn(['c',"1",'d',1],'kkk');
+
+let value = imObj2.setIn(['d',2,'c',0,'c'],2);
+
+console.log(value.toJS());
+
+
+console.log(imObj.toJS());
+console.log(imObj2.toJS());
+
+
+
+
+
+let store = createStore(AppReducer);
 render(
 <Provider store={store}>
     <App />
