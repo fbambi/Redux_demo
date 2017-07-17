@@ -18,9 +18,9 @@ class _Page1 extends Component{
 }
 
 function mapStateToProps(state){
-  console.log(state);
+  var _state = state.counterReducer;
   return {
-    count:state.count
+    count:_state.count
   }
 }
 

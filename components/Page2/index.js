@@ -9,10 +9,6 @@ class _Page2 extends Component{
 
   render(){
     const {handleClick} = this.props;
-
-    console.log('handleClick');
-    console.log(this.props);
-
     return(
       <div>
           <button onClick={handleClick}>add</button>

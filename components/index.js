@@ -11,7 +11,6 @@ import AppReducer from './reducer.js';
 class App extends Component {
     render() {
       const {dispatch} = this.props;
-      console.log(dispatch);
         return (
             <div>
                 
@@ -21,13 +20,9 @@ class App extends Component {
     }
 }
 
-console.log(AppReducer);
-
 function counter(state={count:0},action){
   switch (action.type){
     case 'add':
-    console.log('into switch');
-    console.log(state.count,action.count);
       return {
         count:state.count+action.count
       }
@@ -38,7 +33,7 @@ function counter(state={count:0},action){
 }
 
 
-var store = createStore(counter);
+var store = createStore(AppReducer);
 render(
 <Provider store={store}>
     <App />
