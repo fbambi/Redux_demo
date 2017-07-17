@@ -20,9 +20,10 @@ class _Page1 extends Component{
 function mapStateToProps(state){
   console.log(state);
   return {
-    value:state.count
+    count:state.count
   }
 }
+
 
 const Page1 = connect(mapStateToProps)(_Page1);
 

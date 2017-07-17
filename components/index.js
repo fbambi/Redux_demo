@@ -14,7 +14,7 @@ class App extends Component {
       console.log(dispatch);
         return (
             <div>
-                <h1>Hello</h1>
+                
                 <Page />
             </div>
         )
@@ -26,6 +26,8 @@ console.log(AppReducer);
 function counter(state={count:0},action){
   switch (action.type){
     case 'add':
+    console.log('into switch');
+    console.log(state.count,action.count);
       return {
         count:state.count+action.count
       }
