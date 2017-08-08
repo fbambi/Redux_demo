@@ -28,7 +28,7 @@ let arr=[["3208.50","3205.06","3195.41","3210.89"],["3138.31","3135.35","3123.75
 
 function getMALine(data, day) {
   const LAST_POSITION = 2;
-  const FLOAT_SIZE = 2;
+  const FLOAT_SIZE = 3;
   let mALine = [];
   data.forEach((el, index, array) => {
     if (index < day - 1) {
