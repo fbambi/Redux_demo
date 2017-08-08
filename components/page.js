@@ -1,23 +1,21 @@
-import React,{Component} from 'react';
+import React, {Component} from 'react';
 import {render} from 'react-dom';
 
-import Page1 from './Page1/index.js';
-import Page2 from './Page2/index.js';
+import Button from './Button/index.js';
+import Display from './Display/index.js';
 
-class Page extends Component{
-  constructor(props){
+class Page extends Component {
+  constructor(props) {
     super(props)
   }
-  render(){
+  render() {
     return (
       <div>
-        <Page1 />
-        <Page2 />
+        <Display/>
+        <Button/>
       </div>
     );
   }
 }
-
-
 
 export default Page;

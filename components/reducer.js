@@ -1,9 +1,10 @@
 import {combineReducers} from 'redux';
 
-import counterReducer from './page1/counterReducer.js'
+import display from './Display/reducer.js';
+import button from './Button/reducer.js'
 
-const AppReducer = combineReducers({
-  counterReducer
-});
+console.log('AppReducer')
+
+const AppReducer = combineReducers({button:button,display:display,});
 
 export default AppReducer;
