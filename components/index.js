@@ -1,4 +1,2 @@
 
-let str = 'this is a str';
-
-
+let str = 'this is master';
